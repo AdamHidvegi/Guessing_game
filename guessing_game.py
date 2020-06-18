@@ -28,7 +28,7 @@ words_from_file = []
 hints_from_file = []
 
 def set_up_players_table():
-    #cursor.execute("DROP TABLE IF EXISTS players")
+    cursor.execute("DROP TABLE IF EXISTS players")
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS players (
             first_name TEXT,
@@ -43,7 +43,7 @@ def set_up_players_table():
     connection.commit()
     
 def set_up_words_table():
-    #cursor.execute("DROP TABLE IF EXISTS words")
+    cursor.execute("DROP TABLE IF EXISTS words")
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS words (
             word TEXT,
